@@ -71,14 +71,14 @@ public class FileUtil {
             {".z", "application/x-compress"},
             {".zip", "application/x-zip-compressed"},
             {".dll", "application/x-msdownload"},
-            {".evy","application/envoy"},
-            {".fif","application/fractals"},
-            {".spl","application/futuresplash"},
-            {".hta","application/hta"},
-            {".acx","application/internet-property-stream"},
-            {".hqx","application/mac-binhex40"},
-            {".dot","application/msword"},
-            {".dms","application/octet-stream"},
+            {".evy", "application/envoy"},
+            {".fif", "application/fractals"},
+            {".spl", "application/futuresplash"},
+            {".hta", "application/hta"},
+            {".acx", "application/internet-property-stream"},
+            {".hqx", "application/mac-binhex40"},
+            {".dot", "application/msword"},
+            {".dms", "application/octet-stream"},
             {"", "*/*"}
     };
 
@@ -109,6 +109,9 @@ public class FileUtil {
     }
 
     public static String getFileExt(String fileName) {
+        if (fileName == null) {
+            return "";
+        }
         int dotIndex = fileName.lastIndexOf(".");
         if (dotIndex < 0) {
             return "";
