@@ -23,7 +23,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 @WebServlet("/upload")
-@MultipartConfig(maxRequestSize = 1024L * 10000)
+@MultipartConfig(maxRequestSize = 50_000_000L)
 public class UploadServlet extends HttpServlet {
 
     @Override
